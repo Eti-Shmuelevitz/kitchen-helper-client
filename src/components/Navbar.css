@@ -62,14 +62,7 @@
   align-items: center;
   gap: 8px;
   margin-right: 8px;
-  background: #f1edff;
   color: #5b3fd9;
-  border-radius: 12px;
-}
-
-.navbar-links .navbar-add:hover {
-  background: #e6dfff;
-  color: #4c32c4;
 }
 
 .navbar-add-icon {
@@ -84,4 +77,10 @@
   color: #5b3fd9;
   font-size: 16px;
   line-height: 1;
+}
+
+/* הקישור של המסך שבו נמצאים עכשיו */
+.navbar-links a.active {
+  background: #eef0ff;
+  color: #5b3fd9;
 }

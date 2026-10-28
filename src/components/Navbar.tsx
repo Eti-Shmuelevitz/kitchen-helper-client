@@ -1,4 +1,4 @@
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import './Navbar.css';
 
@@ -16,9 +16,8 @@ function Navbar(){
         מה מבשלים היום?
       </Link>
      <div className='navbar-links'>
-     <Link to="/recipes">מתכונים</Link>
-     <Link to="/menu">תפריט שבועי</Link>
-     <Link to="/shopping">רשימת קניות</Link>
+     <NavLink to="/recipes" end>מתכונים</NavLink>
+     <NavLink to="/menu">תפריט שבועי</NavLink>
        {isManager && (
     <Link to="/recipes/new" className="navbar-add">
       <span className="navbar-add-icon">+</span>
