@@ -9,10 +9,33 @@ interface AuthCardProps {
   children: ReactNode;
 }
 
-// המסגרת המשותפת למסך הכניסה ולמסך ההרשמה: כרטיס לבן, כותרת ולשוניות
+// גדלים של הבועות שעולות בחלק הסגול
+const bubbles = [18, 34, 22, 48, 14, 28, 40, 20, 30, 16, 44, 24];
+
+// המסגרת המשותפת למסך הכניסה ולמסך ההרשמה: חלק סגול, וכרטיס לבן עם כותרת ולשוניות
 function AuthCard({ title, subtitle, activeTab, children }: AuthCardProps) {
   return (
     <div className="auth-page">
+      <div className="auth-shell">
+        <div className="auth-art" aria-hidden="true">
+          {bubbles.map((size, index) => (
+            <span
+              key={index}
+              className="bubble"
+              style={{
+                width: size,
+                height: size,
+                left: `${6 + index * 7.8}%`,
+                animationDuration: `${6 + (index % 4) * 1.7}s`,
+                animationDelay: `-${index * 0.9}s`,
+              }}
+            />
+          ))}
+          <div className="auth-pot">🍲</div>
+          <h2 className="auth-art-title">מה מבשלים היום?</h2>
+          <p className="auth-art-text">כל המתכונים של הבית, במקום אחד.</p>
+        </div>
+
       <div className="auth-card">
         <h1 className="auth-title">{title}</h1>
         <p className="auth-subtitle">{subtitle}</p>
@@ -27,6 +50,7 @@ function AuthCard({ title, subtitle, activeTab, children }: AuthCardProps) {
         </div>
 
         {children}
+      </div>
       </div>
     </div>
   );
