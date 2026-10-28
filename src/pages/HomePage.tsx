@@ -3,6 +3,7 @@ import { useQuery } from '@tanstack/react-query';
 import { apiRequest } from '../api/api';
 import { useAuth } from '../context/AuthContext';
 import type { Paged, RecipeCard } from '../types';
+import RecipeWheel from '../components/RecipeWheel';
 import './HomePage.css';
 
 function HomePage() {
@@ -30,8 +31,10 @@ function HomePage() {
             לכל המתכונים
           </Link>
         </div>
-        <div className="home-pot" aria-hidden="true">🍲</div>
+        <img className="home-pot" src="/pot.svg" alt="" />
       </div>
+
+      <RecipeWheel />
 
       <div className="home-stats">
         <Link to="/recipes" className="stat">

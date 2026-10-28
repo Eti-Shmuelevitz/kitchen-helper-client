@@ -247,7 +247,7 @@
 
 .auth-pot {
   position: relative;
-  font-size: 96px;
+  width: 130px;
   margin-bottom: 12px;
   animation: bob 3s ease-in-out infinite;
 }

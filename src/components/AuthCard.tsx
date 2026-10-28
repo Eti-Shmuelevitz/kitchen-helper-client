@@ -31,7 +31,7 @@ function AuthCard({ title, subtitle, activeTab, children }: AuthCardProps) {
               }}
             />
           ))}
-          <div className="auth-pot">🍲</div>
+          <img className="auth-pot" src="/pot.svg" alt="" />
           <h2 className="auth-art-title">מה מבשלים היום?</h2>
           <p className="auth-art-text">כל המתכונים של הבית, במקום אחד.</p>
         </div>
