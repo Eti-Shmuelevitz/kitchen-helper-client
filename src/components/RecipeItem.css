@@ -1,0 +1,30 @@
+/* כרטיס מתכון ברשימה */
+.recipe-item {
+  display: block;
+  padding: 16px 18px;
+  background: #ffffff;
+  border: 1px solid #ece6da;
+  border-radius: 14px;
+  color: #1f2933;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(31, 41, 51, 0.05);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.recipe-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(31, 41, 51, 0.1);
+  border-color: #c9bfff;
+}
+
+.recipe-item-title {
+  margin: 0 0 8px;
+  font-size: 18px;
+  color: #1f2933;
+}
+
+.recipe-item-info {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: #6b7280;
+}

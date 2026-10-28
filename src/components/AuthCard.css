@@ -1,0 +1,200 @@
+/* עיצוב משותף למסכי הכניסה וההרשמה */
+
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+  background-color: #faf6ee;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 10px 30px rgba(31, 41, 51, 0.08);
+}
+
+.auth-title {
+  margin: 0;
+  font-size: 22px;
+  color: #1f2933;
+}
+
+.auth-subtitle {
+  margin: 6px 0 20px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* לשוניות התחברות / הרשמה */
+.auth-tabs {
+  display: flex;
+  gap: 4px;
+  padding: 4px;
+  background: #eef0f5;
+  border-radius: 12px;
+  margin-bottom: 22px;
+}
+
+.auth-tab {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  border-radius: 9px;
+  color: #4b5563;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.auth-tab.active {
+  background: #ffffff;
+  color: #5b3fd9;
+  box-shadow: 0 2px 0 #5b3fd9;
+}
+
+/* שדות */
+.auth-field {
+  margin-bottom: 16px;
+}
+
+.auth-field label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #1f2933;
+}
+
+.auth-field input {
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid #d5d9e2;
+  border-radius: 10px;
+  font-size: 15px;
+  font-family: inherit;
+}
+
+.auth-field input:focus {
+  outline: none;
+  border-color: #6d4ae8;
+  box-shadow: 0 0 0 3px rgba(109, 74, 232, 0.15);
+}
+
+/* שדה סיסמה עם כפתור הצגה */
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper input {
+  padding-left: 78px;
+}
+
+.password-toggle {
+  position: absolute;
+  left: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 6px 10px;
+  border: none;
+  border-radius: 8px;
+  background: #eef0f5;
+  color: #4b5563;
+  font-size: 13px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.auth-hint {
+  margin: 6px 0 0;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.auth-error {
+  margin: 6px 0 0;
+  font-size: 13px;
+  color: #c0392b;
+}
+
+.auth-server-error {
+  margin: 0 0 14px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: #fdecea;
+  color: #b42318;
+  font-size: 14px;
+}
+
+/* בחירת תפקיד בכרטיסים */
+.role-options {
+  display: flex;
+  gap: 12px;
+}
+
+.role-option {
+  position: relative;
+  flex: 1;
+  cursor: pointer;
+  border: 1px solid #d5d9e2;
+  border-radius: 12px;
+  padding: 14px;
+  background: #ffffff;
+}
+
+/* כפתור הבחירה עצמו מוסתר: לוחצים על כל הכרטיס */
+.role-option input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.role-option.selected {
+  border: 2px solid #6d4ae8;
+  background: #eef0ff;
+  box-shadow: 0 0 0 3px rgba(109, 74, 232, 0.12);
+  padding: 13px;
+}
+
+.role-title {
+  display: block;
+  font-weight: 700;
+  color: #1f2933;
+  margin-bottom: 4px;
+}
+
+.role-description {
+  display: block;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* כפתור שליחה */
+.auth-button {
+  width: 100%;
+  margin-top: 8px;
+  padding: 13px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #4f46e5, #7c3aed);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.auth-button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+@media (max-width: 420px) {
+  .role-options {
+    flex-direction: column;
+  }
+}

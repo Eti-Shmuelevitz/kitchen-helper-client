@@ -1,0 +1,150 @@
+/* מסך של מתכון אחד */
+.recipe-page {
+  max-width: 900px;
+}
+
+.recipe-back {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: #6b7280;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.recipe-back:hover {
+  color: #5b3fd9;
+}
+
+/* החלק העליון: שם, תיאור ופרטים */
+.recipe-header {
+  position: relative;
+  padding: 24px 28px;
+  margin-bottom: 20px;
+  background: #ffffff;
+  border: 1px solid #ece6da;
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(31, 41, 51, 0.05);
+}
+
+.recipe-title {
+  margin: 0 0 8px;
+  font-size: 28px;
+  color: #1f2933;
+}
+
+.recipe-description {
+  margin: 0 0 12px;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+.recipe-meta {
+  display: inline-block;
+  margin: 0;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: #f4f1ff;
+  color: #5b3fd9;
+  font-size: 14px;
+}
+
+.recipe-edit {
+  position: absolute;
+  top: 24px;
+  left: 28px;
+  padding: 7px 16px;
+  border: 1px solid #d5d9e2;
+  border-radius: 10px;
+  color: #1f2933;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.recipe-edit:hover {
+  border-color: #6d4ae8;
+  color: #5b3fd9;
+}
+
+/* מצרכים ושלבים, זה ליד זה */
+.recipe-body {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.recipe-section {
+  padding: 20px 24px;
+  background: #ffffff;
+  border: 1px solid #ece6da;
+  border-radius: 16px;
+}
+
+.recipe-section h2 {
+  margin: 0 0 14px;
+  font-size: 19px;
+  color: #1f2933;
+}
+
+/* רשימת המצרכים */
+.ingredients-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ingredients-list li {
+  padding: 9px 0;
+  border-bottom: 1px dashed #ece6da;
+  color: #374151;
+}
+
+.ingredients-list li:last-child {
+  border-bottom: none;
+}
+
+/* שלבי ההכנה, עם מספר בעיגול */
+.steps-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: step;
+}
+
+.steps-list li {
+  position: relative;
+  padding: 4px 44px 16px 0;
+  color: #374151;
+  line-height: 1.7;
+  counter-increment: step;
+}
+
+.steps-list li::before {
+  content: counter(step);
+  position: absolute;
+  right: 0;
+  top: 2px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #6d4ae8;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* בטלפון: אחד מתחת לשני */
+@media (max-width: 700px) {
+  .recipe-body {
+    grid-template-columns: 1fr;
+  }
+
+  .recipe-edit {
+    position: static;
+    display: inline-block;
+    margin-top: 12px;
+  }
+}

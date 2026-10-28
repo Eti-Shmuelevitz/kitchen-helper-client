@@ -1,0 +1,86 @@
+/* מסך רשימת המתכונים */
+.recipes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+/* שורת החיפוש */
+.recipes-search {
+  width: 100%;
+  max-width: 420px;
+  margin-bottom: 20px;
+  padding: 11px 14px;
+  border: 1px solid #ece6da;
+  border-radius: 12px;
+  background: #ffffff;
+  font-size: 15px;
+  font-family: inherit;
+  box-shadow: 0 2px 8px rgba(31, 41, 51, 0.04);
+}
+
+.recipes-search:focus {
+  outline: none;
+  border-color: #6d4ae8;
+  box-shadow: 0 0 0 3px rgba(109, 74, 232, 0.15);
+}
+
+/* כפתורי הסינון לפי כשרות */
+.kosher-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+.filter-chip {
+  padding: 4px 11px;
+  border: 1px solid #ece6da;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #4b5563;
+  font-size: 13px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.filter-chip:hover {
+  border-color: #c9bfff;
+  color: #5b3fd9;
+}
+
+.filter-chip.selected {
+  border-color: #6d4ae8;
+  background: #6d4ae8;
+  color: #ffffff;
+}
+
+/* המיון */
+.recipes-sort {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.recipes-sort label {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.recipes-sort select {
+  padding: 6px 12px;
+  border: 1px solid #ece6da;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #1f2933;
+  font-size: 14px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.recipes-sort select:focus {
+  outline: none;
+  border-color: #6d4ae8;
+  box-shadow: 0 0 0 3px rgba(109, 74, 232, 0.15);
+}
